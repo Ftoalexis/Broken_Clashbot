@@ -50,12 +50,12 @@ Func GoldElixirChange()
 		ElseIf ($Gold2 = 0 And $Elixir2 = 0) Then
 			SetLog("No resource detected, returning in " & $itxtReturnh & " seconds", $COLOR_GREEN)
 			If _Sleep($itxtReturnh * 1000) Then Return
-			GUICtrlSetData($lblresultvillagesattacked, GUICtrlRead($lblresultvillagesattacked) + 1)
+			;GUICtrlSetData($lblresultvillagesattacked, GUICtrlRead($lblresultvillagesattacked) + 1)
 			Return False
 		ElseIf ($Gold1 = $Gold2 And $Elixir1 = $Elixir2 and $Dark1 = $Dark2 ) Then
 			SetLog("No Income detected, returning in " & $itxtReturnh & " seconds", $COLOR_BLUE)
 			If _Sleep($itxtReturnh * 1000) Then Return
-			GUICtrlSetData($lblresultvillagesattacked, GUICtrlRead($lblresultvillagesattacked) + 1)
+			;GUICtrlSetData($lblresultvillagesattacked, GUICtrlRead($lblresultvillagesattacked) + 1)
 			Return False
 		Else
 			SetLog("Loot change detected, waiting...", $COLOR_GREEN)

@@ -140,7 +140,7 @@ Func VillageSearch($TakeSS = 0) ;Control for searching a village that meets cond
 						_Push("Disconnected", "Your bot got disconnected while searching for enemy..")
 					EndIf
 					If _Sleep(500) Then Return
-					ReturnHome(False, False) ;If End battle is available
+					ReturnHome(False, False, True) ;If End battle is available
 					checkMainScreen()
 					If _Sleep(1000) Then Return
 					ZoomOut()
