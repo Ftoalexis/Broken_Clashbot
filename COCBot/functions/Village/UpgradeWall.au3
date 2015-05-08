@@ -80,16 +80,15 @@ Func UpgradeWallelix()
 		Click($WallX, $WallY)
 		_Sleep(600)
 		_CaptureRegion()
-		If _ColorCheck(_GetPixelColor(596, 570), Hex(0xFFFFFF, 6), 20) = False Then
+		If _ColorCheck(_GetPixelColor(605, 567), Hex(0xF839FC, 6), 20) = False Then
 			SetLog("Not enough Elixir or your Wall is lower than level 8 ", $COLOR_ORANGE)
 		Else
-			If _ColorCheck(_GetPixelColor(596, 570), Hex(0xFFFFFF, 6), 20) = True  or _ColorCheck(_GetPixelColor(583, 570), Hex(0xFFFFFF, 6), 20) = True Then
+			If _ColorCheck(_GetPixelColor(596, 570), Hex(0x5B5B5B, 6), 20) = True  or _ColorCheck(_GetPixelColor(605, 567), Hex(0xF839FC, 6), 20) = True Then
 				Click(560, 599) ; Click Upgrade
 				_Sleep(2000)
 				Click(472, 482) ; Click Okay
 				SetLog("Upgrading Done !!!", $COLOR_BLUE) ; Done upgrade
-				$WallUpgrade += 1
-				GUICtrlSetData($lblwallupgradecount, $WallUpgrade)
+				GUICtrlSetData($lblwallupgradecount, GUICtrlRead($lblwallupgradecount)+ 1)
 				_Sleep(1000)
 			Else
 				Click(1, 1) ; Click away
